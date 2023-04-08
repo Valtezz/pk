@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>It поддержка Школы "Покровский квартал"</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="form">
+      <form action="api/api.php" method="post" id="form" class="form_body">
+        <div class="form_title">
+          <img
+            src="./images/orglogo.png"
+            class="form_image"
+            width="100px"
+            height="100px"
+          />
+          <h1 class="title">Техподдержка "Покровский Квартал"</h1>
+        </div>
+        <div class="form_item">
+          <label for="formName" class="form_label"
+            >Пожалуйста представьтесь:</label
+          >
+          <input
+            type="text"
+            name="name"
+            id="formName"
+            class="form_input"
+            placeholder="ФИО"
+          />
+        </div>
+        <div class="form_item">
+          <label for="email" class="form_label">E-mail:</label>
+          <input type="email" name="email" id="email" class="form_input" />
+        </div>
+        <!-- <div class="form_item">
+                <label for="phone" class="form_label">Телефон для связи:</label>
+                <input id="phone" type="tel" class="form_input">
+            </div> -->
+        <div class="form_item">
+          <label for="constr_select" class="form_label">Выберите здание:</label>
+          <select name="constructions" id="constr_select" class="">
+            <option value="Большой казеный" selected>Большой Казеный</option>
+            <option value="Лялин переулок">Лялин переулок</option>
+            <option value="Земляной Вал">Земляной Вал</option>
+            <option value="Большой Трехсвятительский">
+              Большой Трехсвятительский
+            </option>
+            <option value="Большой Трехсвятительский(ОВЗ)">
+              Большой Трехсвятительский(ОВЗ)
+            </option>
+            <option value="Покровка">Покровка</option>
+            <option value="Шоссе Энтузиастов">Шоссе Энтузиастов</option>
+            <option value="Текстильщики">Текстильщики</option>
+            <option value="Коломенская">Коломенская</option>
+          </select>
+        </div>
+        <div class="form_item">
+          <label for="kab_num" class="form_label">Кабинет номер:</label>
+          <input type="text" name="kab" id="kab_num" class="form_input" />
+        </div>
+        <div class="form_item">
+          <label for="problem" class="form_label">Опишите проблему:</label>
+          <textarea
+            id="problem"
+            name="problem"
+            class="form_input"
+            cols="20"
+            rows="1"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="form_button button">Отправить</button>
+      </form>
+    </div>
+    <footer>
+      <i class="fa fa-copyright"></i>By Valtezz
+      <a href="https://github.com/Valtezz" target="_blank"
+        ><i class="fa fa-github"></i>Github</a
+      >
+    </footer>
+  </body>
+</html>
