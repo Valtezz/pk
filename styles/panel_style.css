@@ -58,6 +58,7 @@ h2 {
     flex-shrink: 0;
     padding: 2px;
     width: 200px;
+    height: fit-content;
     margin: 5px;
     background-color: white;
     border-radius: 25px;

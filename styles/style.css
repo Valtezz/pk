@@ -11,10 +11,8 @@
 body{
     line-height: 1;
     font-size: 14px;
-    background-color: rgb(39, 37, 37);
-    background: linear-gradient(0,0,0,.5), url('../images/bg.jpg');
-    background-size: 100%;
-    
+    background: url('../images/bg.jpg');
+    backdrop-filter: brightness(50%);   
 }
 
 .form {
@@ -149,4 +147,5 @@ footer{
     height: 20px;
     background-color: #79a0c1;
     color: white;
+    text-align: center;
   }

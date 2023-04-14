@@ -1,6 +1,7 @@
 
 
 <?php
+    header('Access-Control-Allow-Origin: *');
 include("connect.php");
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method == 'POST'){
@@ -18,24 +19,24 @@ if ($method == 'POST'){
         echo "Error: " . $sql . "<br>" . mysqli_error($connectToBase);
       }
       mysqli_close($connectToBase);
-     header('Location: /hd',true,307);
+     header('Location: ../pk/index.html',true,307);
     }
      elseif ($method == 'GET'){
     // Method is GET
-    header('Content-type: application/json; charset=utf-8');
     $sql = "SELECT * FROM `pkhd`.`tickets`";
     $tickets = mysqli_query($connectToBase,$sql);
     $ticketList = [];
     while($ticket = mysqli_fetch_assoc($tickets)){
         $ticketList[] = $ticket;
     }
-    echo json_encode($ticketList, JSON_UNESCAPED_UNICODE);
-    http_response_code(200);
+    header('Content-type: application/json');
+    echo json_encode($ticketList);
 
 } elseif ($method == 'PUT'){
     // Method is PUT
 } elseif ($method == 'DELETE'){
     // Method is DELETE
+    // $sql = "DELETE FROM `pkhd`.`tickets` WHERE `tickets`.`id` = $_DELETE['id']";
 } else {
     // Method unknown
 }
