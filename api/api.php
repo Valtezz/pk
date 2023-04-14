@@ -19,7 +19,7 @@ if ($method == 'POST'){
         echo "Error: " . $sql . "<br>" . mysqli_error($connectToBase);
       }
       mysqli_close($connectToBase);
-     header('Location: ../pk/index.html',true,307);
+     header('Location: ../index.html',true,307);
     }
      elseif ($method == 'GET'){
     // Method is GET
