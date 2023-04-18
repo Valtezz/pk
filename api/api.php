@@ -20,7 +20,7 @@ if ($method == 'POST'){
         echo "Error: " . $sql . "<br>" . mysqli_error($connectToBase);
       }
       mysqli_close($connectToBase);
-      message_to_telegram('Новая заявка!\n'.'Здание: '.$place.'\n'.'Кабинет: '.$kab.'\n'.'Проблема: '. $problem.'\n');
+      message_to_telegram("Новая заявка!\n".'Здание: '.$place."\n".'Кабинет: '.$kab."\n".'Проблема: '. $problem."\n");
      header('Location: ../index.html',true,307);
     }
      elseif ($method == 'GET'){
