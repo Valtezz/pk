@@ -59,6 +59,7 @@ h2 {
     padding: 2px;
     width: 200px;
     height: fit-content;
+    overflow-wrap: break-word;
     margin: 5px;
     background-color: white;
     border-radius: 25px;
