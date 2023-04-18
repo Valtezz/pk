@@ -2,7 +2,8 @@
 
 <?php
     header('Access-Control-Allow-Origin: *');
-include("connect.php");
+include 'connect.php';
+include 'alerts.php';
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method == 'POST'){
     // Method is POST
@@ -12,13 +13,14 @@ if ($method == 'POST'){
     $kab = $_POST['kab'];
     $problem = $_POST['problem'];
 
-    $sql = "INSERT INTO `pkhd`.`tickets` (`id`, `name`, `email`, `place`, `kab`, `problem`, `done`) VALUES (NULL, '$name', '$email', '$place', '$kab', '$problem', '0')";
+    $sql = "INSERT INTO `pkhd`.`tickets` (`name`, `email`, `place`, `kab`, `problem`) VALUES ('$name', '$email', '$place', '$kab', '$problem')";
     if (mysqli_query($connectToBase, $sql)) {
         http_response_code(201);
       } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($connectToBase);
       }
       mysqli_close($connectToBase);
+      message_to_telegram('Новая заявка!\n'.'Здание: '.$place.'\n'.'Кабинет: '.$kab.'\n'.'Проблема: '. $problem.'\n');
      header('Location: ../index.html',true,307);
     }
      elseif ($method == 'GET'){
