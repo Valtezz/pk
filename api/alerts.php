@@ -1,10 +1,10 @@
 <?php
 
 // сюда нужно вписать токен вашего бота
-define('TELEGRAM_TOKEN', '478781306:AAE4GxKfELdPp9-FFqdmr3E1kGygstAKjv8');
+define('TELEGRAM_TOKEN', '5870976008:AAGKqNF3vf4_E2Yu3U-HeZIDCVXumQp5qg8');
 
-// сюда нужно вписать ваш внутренний айдишник
-define('TELEGRAM_CHATID', '174979251');
+// сюда нужно вписать айдишник чата 
+define('TELEGRAM_CHATID', '-1001538433416');
 
 function message_to_telegram($text)
 {
