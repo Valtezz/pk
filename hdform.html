@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,19 +45,28 @@
           <label for="constr_select" class="form_label">Выберите здание:</label>
           <select name="place" id="constr_select" class="">
             <option value="---" selected>--Выберите здание--</option>
-            <option value="Большой казеный">Большой Казеный</option>
-            <option value="Лялин переулок">Лялин переулок</option>
-            <option value="Земляной Вал">Земляной Вал</option>
-            <option value="Большой Трехсвятительский">
-              Большой Трехсвятительский
-            </option>
-            <option value="Большой Трехсвятительский(ОВЗ)">
-              Большой Трехсвятительский(ОВЗ)
-            </option>
-            <option value="Покровка">Покровка</option>
-            <option value="Шоссе Энтузиастов">Шоссе Энтузиастов</option>
-            <option value="Текстильщики">Текстильщики</option>
-            <option value="Коломенская">Коломенская</option>
+            <option value="Большой Казённый переулок, дом 9">Большой Казённый переулок, дом 9</option>
+            <option value="улица Земляной Вал, дом 44А, с.1">улица Земляной Вал, дом 44А, с.1</option>
+            <option value="Лялин переулок, дом 12, с.1">Лялин переулок, дом 12, с.1</option>
+            <option value="улица Покровка, дом 10, с.5">улица Покровка, дом 10, с.5</option>
+            <option value="Большой Трёхсвятительский переулок, дом 4">Большой Трёхсвятительский переулок, дом 4</option>
+            <option value="Большой Трёхсвятительский переулок, дом 4, с.2">Большой Трёхсвятительский переулок, дом 4, с.2</option>
+            <option value="Большой Трёхсвятительский переулок, дом 4, с.3">Большой Трёхсвятительский переулок, дом 4, с.3</option>
+            <option value="Коломенская набережная, дом 8">Коломенская набережная, дом 8</option>
+            <option value="шоссе Энтузиастов, дом 100А">шоссе Энтузиастов, дом 100А</option>
+            <option value="улица Воронцово Поле, дом 5/7, с.2">улица Воронцово Поле, дом 5/7, с.2</option>
+            <option value="Казарменный переулок, дом 10, с.15">Казарменный переулок, дом 10, с.15</option>
+            <option value="Казарменный переулок, дом 6, с.5">Казарменный переулок, дом 6, с.5</option>
+            <option value="Подсосенский переулок, дом 26, с.6">Подсосенский переулок, дом 26, с.6</option>
+            <option value="Фурманный переулок, дом 8">Фурманный переулок, дом 8</option>
+            <option value="Малый Златоустинский переулок, дом 7, с.2">Малый Златоустинский переулок, дом 7, с.2</option>
+            <option value="улица Машкова, дом 20, с.1">улица Машкова, дом 20, с.1</option>
+            <option value="улица Машкова, дом 3А">улица Машкова, дом 3А</option>
+            <option value="1-я улица Текстильщиков, дом 16">1-я улица Текстильщиков, дом 16</option>
+            <option value="1-я улица Текстильщиков, дом 13">1-я улица Текстильщиков, дом 13</option>
+            <option value="8-я улица Текстильщиков, дом 14, к.2">8-я улица Текстильщиков, дом 14, к.2</option>
+            <option value="1-я улица Текстильщиков, дом 11">1-я улица Текстильщиков, дом 11</option>
+            <option value="улица Артюхиной, дом 4, к.2">улица Артюхиной, дом 4, к.2</option>
           </select>
         </div>
         <div class="form_item">
@@ -64,12 +74,23 @@
           <input type="text" name="kab" id="kab_num" class="form_input" />
         </div>
         <div class="form_item">
-          <label for="problem" class="form_label">Опишите проблему:</label>
+          <label for="category" class="form_label">Выберите категорию проблемы:</label>
+          <select name="category" id="category" onchange="show(this.value)">
+            <option value="--">--Категория проблемы--</option>
+            <option value="Интерактивная панель">Интерактивная панель</option>
+            <option value="Ноутбук(мостех)">Ноутбук(мостех)</option>
+            <option value="Ноутбук">Ноутбук</option>
+            <option value="Принтер">Принтер</option>
+            <option value="Другое">Другое...</option>
+          </select>
+        </div>
+        <div class="form_item">
+          <label for="problem" class="form_label" id="problemLabel">Опишите проблему:</label>
           <textarea
             id="problem"
             name="problem"
             class="form_input"
-            cols="20"
+            cols="10"
             rows="1"
           ></textarea>
         </div>
@@ -83,5 +104,6 @@
         ><i class="fa fa-github"></i>Github</a
       >
     </footer>
+    <script src="./scripts/hdform.js"></script>
   </body>
 </html>
