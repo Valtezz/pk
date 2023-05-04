@@ -80,12 +80,12 @@ h2 {
     border-top-right-radius: 25px;
 
   }
-  .container li:nth-child(odd) {
+  .container div:nth-child(odd) li{
 
     background-color: #CEDFFF;/* фон нечетных строк */
 
   }
-  .container li:nth-child(even) {
+  .container div:nth-child(even) li{
 
     background-color: #E1FDBA;/* фон четных строк */
 
